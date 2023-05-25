@@ -3,9 +3,9 @@
 import Input from "./components/Input"
 import Button from "./components/Button"
 
-import Logo from "./assets/logo.jsx"
+import Logo from './assets/Logo'
 import MasterCard from "./assets/MaterCard"
-import Containers from "./components/Containers.jsx"
+import Containers from "./components/Containers"
 import { Edit2, Grip } from "lucide-react"
 import Badge from "./assets/Badge"
 import CardDemo from "./components/CardDemo"
