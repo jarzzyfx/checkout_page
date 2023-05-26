@@ -76,7 +76,7 @@ function App() {
   
   };
 
-  let {minutes, seconds} = formatTime(  CountDown(90))
+  let {minutes, seconds} = formatTime(90)
   console.log(minutes, seconds)
  
   
@@ -95,12 +95,12 @@ function App() {
           <div className="flex items-center gap-1 font-semibold">
             <section className="gap-2 flex">
               <Containers item={0} />
-              <Containers item={minutes} />
+              <Containers item={trimNumber(minutes, 1)} />
             </section>
             :
             <section className="gap-2 flex">
-              <Containers item={seconds} />
-              <Containers item={seconds} />
+              <Containers item={trimNumber(seconds, 2)} />
+              <Containers item={trimNumber(seconds, 1)} />
             </section>
           </div>
         </header>
