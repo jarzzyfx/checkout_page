@@ -36,7 +36,7 @@ function App() {
   }
 
   const done = () => {
-   if(cardNumber, cvv,exp1,exp2,password) {
+   if(cardNumber && cvv && exp1 && exp2 && password) {
     alert(`payment successfull.
     payment details: executed without errors
     msg: details can be found in the console log`);
