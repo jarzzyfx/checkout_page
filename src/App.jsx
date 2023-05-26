@@ -155,7 +155,7 @@ function App() {
           <span className="w-8 h-8 z-50 rounded-full bg-white absolute -right-4 top-80"></span>
           <span className="w-8 h-8 z-50 rounded-full bg-white absolute -left-4 top-80"></span>
           <span className="w-full h-[0.01rem] outline-dashed absolute outline-[1px] outline-slate-300 left-0 bottom-[20%]"></span>
-          <CardDemo />
+          <CardDemo number = {cardNumber} date1={exp1} date2={exp2} />
 
           <div className="flex w-full h-[100px] flex-col pl-4 pr-4 pt-2 pb-2 gap-1 absolute top-[46%]">
             {/*  */}
