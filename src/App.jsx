@@ -9,6 +9,7 @@ import CardDemo from "./components/CardDemo";
 import AppleLogo from "./assets/AppleLogo";
 import RecieptIconN from "./assets/RecieptIconN";
 import { useState } from "react";
+import CountDown, { formatTime, trimNumber } from "./lib/utils";
 
 function App() {
   const [cardNumber, setCardNumber] = useState('');
@@ -35,6 +36,7 @@ function App() {
   }
 
   const done = () => {
+   if(cardNumber, cvv,exp1,exp2,password) {
     alert(`payment successfull.
     payment details: executed without errors
     msg: details can be found in the console log`);
@@ -50,6 +52,13 @@ function App() {
     setExp1Number('')
     setExp2Number('')
     setPasswordNumber('')
+   }else{
+    alert(`
+    msgHead: Error
+    ErrorType: Empty input values
+    msg: Payment Not SuccessFull
+    `)
+   }
   }
 
   const formatCardNumber = (e) => {
@@ -66,6 +75,10 @@ function App() {
     setCardNumber(formattedInput.trim());
   
   };
+
+  let {minutes, seconds} = formatTime(  CountDown(90))
+  console.log(minutes, seconds)
+ 
   
   return (
     <div className="flex p-2 md:p-10 gap-2 md:gap-4 flex-col md:flex-row md:justify-between items-center w-full h-screen relative">
@@ -82,12 +95,12 @@ function App() {
           <div className="flex items-center gap-1 font-semibold">
             <section className="gap-2 flex">
               <Containers item={0} />
-              <Containers item={1} />
+              <Containers item={minutes} />
             </section>
             :
             <section className="gap-2 flex">
-              <Containers item={1} />
-              <Containers item={9} />
+              <Containers item={seconds} />
+              <Containers item={seconds} />
             </section>
           </div>
         </header>
